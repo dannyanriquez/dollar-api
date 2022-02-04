@@ -24,7 +24,7 @@ export const Navbar = () => {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             </MDBNavbarItem>
             <MDBNavbarItem>
-            <Nav.Link as={Link} to="/cotizaciones">Cotizaciones</Nav.Link>
+            <Nav.Link as={Link} to="/cotizaciones">Dolar</Nav.Link>
             </MDBNavbarItem>
           </MDBNavbarNav>
         </MDBCollapse>

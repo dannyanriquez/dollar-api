@@ -1,7 +1,7 @@
 import { Navbar } from "./components/Navbar"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {Inicio} from './components/Inicio'
-import {Cotizaciones} from './components/Cotizaciones'
+import {DolarValue} from './components/DolarValue'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <BrowserRouter>
       <Navbar/>
        <Routes>
-        <Route path="/cotizaciones" element={<Cotizaciones/>}/>
+        <Route path="/cotizaciones" element={<DolarValue/>}/>
         <Route exact path="/" element={<Inicio/>}/>
 
        </Routes>
