@@ -15,14 +15,14 @@ const fetchApi = async () => {
 
 const response = await fetch(url)
 const responseJSON = await response.json()
-const dolarArray = Object.entries(responseJSON)
+const dolarArray = Object.values(responseJSON)
 
 setDolar(dolarArray)
-console.log(dolar[0][1])
+
 
 }
 
-
+console.log(dolar)
 useEffect(() => {
   
   fetchApi()
@@ -46,9 +46,10 @@ useEffect(() => {
         dolar.map((data, index) => 
         <tr key={index} className='table-dark'>
         <th scope='row'>Oficial</th>
-       <td>${data[0][1]}.-</td>
+       <td>${data}.-</td>
        
-      </tr>)
+      </tr>
+       )
         
           
         }
