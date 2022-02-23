@@ -6,7 +6,7 @@ import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
 export const DolarValue = () => {
   
 const [dolar, setDolar] = useState([]); 
-
+const [tipo, setTipo] = useState([]);
 
 const url = "https://criptoya.com/api/dolar"
 
@@ -16,16 +16,14 @@ const fetchApi = async () => {
 const response = await fetch(url)
 const responseJSON = await response.json()
 const dolarArray = Object.values(responseJSON)
+const tipoArray = Object.keys(responseJSON)
 
 setDolar(dolarArray)
-
+setTipo(tipoArray)
 }
 
-
-useEffect(() => {
-  
+useEffect(() => { 
   fetchApi()
-  
 },[]);
 
 
@@ -35,7 +33,7 @@ useEffect(() => {
 <MDBTable>
       <MDBTableHead>
         <tr>
-          <th scope='col'>Tipo</th>
+          <th scope='col'>Tipo de cambio</th>
           <th scope='col'>Cotización</th>
         </tr>
       </MDBTableHead>
@@ -48,10 +46,8 @@ useEffect(() => {
        <td>${data}.-</td>
        
       </tr>
-       )
-        
-          
-        }
+       )}
+
         
       </MDBTableBody>
     </MDBTable>
