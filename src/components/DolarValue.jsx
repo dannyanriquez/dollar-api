@@ -19,15 +19,14 @@ const dolarArray = Object.values(responseJSON)
 
 setDolar(dolarArray)
 
-
 }
 
-console.log(dolar)
+
 useEffect(() => {
   
   fetchApi()
   
-}, []);
+},[]);
 
 
   return (
