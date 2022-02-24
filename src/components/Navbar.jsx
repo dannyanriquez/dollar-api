@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {MDBContainer,MDBNavbar,MDBNavbarBrand,MDBNavbarToggler,MDBNavbarNav,MDBNavbarItem ,MDBIcon,MDBCollapse} from 'mdb-react-ui-kit';
+import {MDBContainer,MDBNavbar,MDBNavbarBrand,MDBNavbarToggler,MDBNavbarNav,MDBNavbarItem,MDBCollapse} from 'mdb-react-ui-kit';
 import { Nav } from 'react-bootstrap';
 
 
@@ -10,13 +10,19 @@ export const Navbar = () => {
   return (
     <MDBNavbar expand='lg' light bgColor='light'>
       <MDBContainer fluid>
-        <MDBNavbarBrand>Logo</MDBNavbarBrand>
+        
+          <MDBNavbarBrand>
+            <Nav.Link as={Link} to="/">
+              <i class="fas fa-hand-holding-usd"></i>
+            </Nav.Link>
+          </MDBNavbarBrand>
+        
         <MDBNavbarToggler
           aria-expanded='false'
           aria-label='Toggle navigation'
-          onClick={() => setShowNavSecond(!showNavSecond)}
-        >
-          <MDBIcon icon='bars' fas />
+          onClick={() => setShowNavSecond(!showNavSecond)}>
+
+
         </MDBNavbarToggler>
         <MDBCollapse navbar show={showNavSecond}>
           <MDBNavbarNav color='black' className=''>
